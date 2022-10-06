@@ -43,8 +43,9 @@ public class CreateCampaignsTest extends BaseClass{
 		  WebDriver_Utility wlib=new WebDriver_Utility();
 		 wlib.waitForPageToLoad(driver);
 		 HomePage home=new HomePage(driver);
-		 WebElement more =driver.findElement(By.xpath("/html/body/table[2]/tbody/tr/td[2]/table/tbody/tr/td[22]/a"));
-		 wlib.mouseOverElement(driver, more);
+		 home.Moremodule();
+		// WebElement more =driver.findElement(By.xpath("/html/body/table[2]/tbody/tr/td[2]/table/tbody/tr/td[22]/a"));
+		// wlib.mouseOverElement(driver, more);
 		home.Campignmodule();
 		CampaignPage camppage=new CampaignPage(driver);
 		 camppage.NewCampaign();
@@ -54,9 +55,12 @@ public class CreateCampaignsTest extends BaseClass{
 		CreatingNewCampign nameforcamp=new CreatingNewCampign(driver);
 		nameforcamp.newcampaign(campname);
 		nameforcamp.savebuttonclick();
+		
 		CampaignValidation campvalid=new CampaignValidation(driver);
+		
 		String actualdata=campvalid.actualcampaignname();
 		 Assert.assertEquals(actualdata.contains(campname), true);
+		 
 	     home.Signoutmodule(driver);
 		driver.close();
 	}

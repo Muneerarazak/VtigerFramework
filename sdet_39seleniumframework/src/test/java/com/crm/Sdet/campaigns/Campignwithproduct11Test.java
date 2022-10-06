@@ -56,8 +56,11 @@ public class Campignwithproduct11Test extends BaseClass{
 			 newproduct.newproduct(prodName);
 			 newproduct.savebutton();
 			 //creating campaign
-		    WebElement element = driver.findElement(By.xpath("//a[text()='More']"));
-             wlib.mouseOverElement(driver, element);
+			 
+			 home.Moremodule();
+
+//		    WebElement element = driver.findElement(By.xpath("//a[text()='More']"));
+      //   wlib.mouseOverElement(driver, WebElement);
      	     CampaignPage camppage=new CampaignPage(driver);
              camppage.NewCampaign();
              String campaignName=elib.getDatatExcelsheet("campaign",1,0)+ranNum;

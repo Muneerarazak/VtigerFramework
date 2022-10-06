@@ -119,7 +119,10 @@ public WebElement getOrganization() {
 
 		
 
-
+  public void contactsclick()
+  {
+	  Contacts.click();
+  }
 	
 	
 }

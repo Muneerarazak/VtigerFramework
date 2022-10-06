@@ -5,6 +5,7 @@ import java.util.Set;
 import java.util.concurrent.TimeUnit;
 
 import org.openqa.selenium.Alert;
+import org.openqa.selenium.JavascriptExecutor;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.interactions.Actions;
@@ -219,5 +220,11 @@ public void dobliClick(WebDriver driver,WebElement element)
 	
 }
 
+
+public void scrollbar(WebDriver driver,int x,int y)
+{
+	JavascriptExecutor js=(JavascriptExecutor) driver;
+	js.executeScript("windows,scrollBy("+x+","+y+")");
 }
 
+}

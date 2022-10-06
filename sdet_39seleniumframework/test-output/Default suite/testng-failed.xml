@@ -3,9 +3,8 @@
 <suite name="Failed suite [Default suite]" guice-stage="DEVELOPMENT">
   <test thread-count="5" name="Default test(failed)">
     <classes>
-      <class name="com.crm.Sdet.campaigns.Campignwithproduct11Test">
+      <class name="LeadModuleTest">
         <methods>
-          <include name="campandproduct"/>
           <include name="AM"/>
           <include name="BM"/>
           <include name="AS"/>
@@ -13,9 +12,10 @@
           <include name="AC"/>
           <include name="BS"/>
           <include name="BC"/>
+          <include name="leadmodule"/>
           <include name="AT"/>
         </methods>
-      </class> <!-- com.crm.Sdet.campaigns.Campignwithproduct11Test -->
+      </class> <!-- LeadModuleTest -->
     </classes>
   </test> <!-- Default test(failed) -->
 </suite> <!-- Failed suite [Default suite] -->
